@@ -4,14 +4,14 @@
     <meta name="keywords" content="简历、关于我、关于我们、我们" />
     <meta name="description" content="对个人情况的一些简介、主要展示个人简历" />
 
-    <link href="{{asset('resources/views/home/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset('resources/views/home/css/font-awesome.css')}}" rel="stylesheet">
-    <link href="{{asset('resources/views/home/css/style-about.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{asset('home/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{asset('home/css/font-awesome.css')}}" rel="stylesheet">
+    <link href="{{asset('home/css/style-about.css')}}" rel="stylesheet" type="text/css" media="all" />
 
     <!-- start-smooth-scrolling -->
-    <script type="text/javascript" src="{{asset('resources/views/home/js/jquery-2.1.4.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('resources/views/home/js/move-top.js')}}"></script>
-    <script type="text/javascript" src="{{asset('resources/views/home/js/easing.js')}}"></script>
+    <script type="text/javascript" src="{{asset('home/js/jquery-2.1.4.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('home/js/move-top.js')}}"></script>
+    <script type="text/javascript" src="{{asset('home/js/easing.js')}}"></script>
 
 @endsection
 @section('content')
@@ -214,10 +214,10 @@
                         <div class="col-md-6 news-left">
                             <div class="biseller-column">
                                 <a class="lightbox" href="#three">
-                                    <img src="{{url('resources/views/home/images/p2.jpg')}}" alt=""/>
+                                    <img src="{{url('home/images/p2.jpg')}}" alt=""/>
                                 </a>
                                 <div class="lightbox-target" id="three">
-                                    <img src="{{url('resources/views/home/images/p2.jpg')}}" alt=""/>
+                                    <img src="{{url('home/images/p2.jpg')}}" alt=""/>
                                     <p class="pop">主要负责TMS3.0系统中的单厅监控、排期管理、映前广告管理</p>
                                     <a class="lightbox-close" href="#"> </a>
 
@@ -232,10 +232,10 @@
                         <div class="col-md-6 news-left">
                             <div class="biseller-column">
                                 <a class="lightbox" href="#two">
-                                    <img src="{{url('resources/views/home/images/p3.jpg')}}" alt=""/>
+                                    <img src="{{url('home/images/p3.jpg')}}" alt=""/>
                                 </a>
                                 <div class="lightbox-target" id="two">
-                                    <img src="{{url('resources/views/home/images/p3.jpg')}}" alt=""/>
+                                    <img src="{{url('home/images/p3.jpg')}}" alt=""/>
                                     <p class="pop">主要负责用户登录、用户管理、权限管理模块的开发</p>
                                     <a class="lightbox-close" href="#"></a>
 
@@ -282,7 +282,7 @@
         {{--</div>--}}
 
     </article>
-    <script type="text/javascript" src="{{asset('resources/views/home/js/bars.js')}}"></script>
+    <script type="text/javascript" src="{{asset('home/js/bars.js')}}"></script>
 @endsection
 
 

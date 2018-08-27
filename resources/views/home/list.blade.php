@@ -20,7 +20,7 @@
             @endforeach
             <div class="blank"></div>
             <div class="ad">
-                <img src="{{asset('resources/views/home/images/ad.png')}}">
+                <img src="{{asset('home/images/ad.png')}}">
             </div>
             <div class="page">
                 {{$articles->links()}}
