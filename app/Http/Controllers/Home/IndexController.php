@@ -40,6 +40,7 @@ class IndexController extends CommonController
 
     public function article($art_id)
     {
+        print_r(123);die;
         $field = Article::Join('category','category.cate_id','=','article.cate_id')->where('art_id',$art_id)->first();
         $article['pre'] = Article::where('art_id','<',$art_id)->orderBy('art_id','desc')->first();
         $article['next'] = Article::where('art_id','>',$art_id)->orderBy('art_id','asc')->first();

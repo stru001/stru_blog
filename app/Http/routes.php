@@ -18,8 +18,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/art/{art_id}', 'Home\IndexController@article');
     Route::get('/aboutUs', 'Home\IndexController@aboutUs');
 
-    Route::any('admin/login', 'Admin\LoginController@login');
-    Route::get('admin/code', 'Admin\LoginController@code');
+    Route::any('/admin/login', 'Admin\LoginController@login');
+    Route::get('/admin/code', 'Admin\LoginController@code');
 
 //    Route::any('admin/test', 'Admin\LoginController@test');
 

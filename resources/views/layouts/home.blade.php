@@ -5,10 +5,10 @@
     <meta name="360-site-verification" content="1808c104f5091a783e5af47e383a09fc" />
     <meta charset="utf-8">
     @yield('info')
-    <link href="{{asset('resources/views/home/css/base.css')}}" rel="stylesheet">
-    <link href="{{asset('resources/views/home/css/index.css')}}" rel="stylesheet">
-    <link href="{{asset('resources/views/home/css/style.css')}}" rel="stylesheet">
-    <link href="{{asset('resources/views/home/css/new.css')}}" rel="stylesheet">
+    <link href="{{asset('/home/css/base.css')}}" rel="stylesheet">
+    <link href="{{asset('/home/css/index.css')}}" rel="stylesheet">
+    <link href="{{asset('/home/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('/home/css/new.css')}}" rel="stylesheet">
 </head>
 <body>
 <header>
