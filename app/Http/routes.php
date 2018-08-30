@@ -17,6 +17,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/cate/{cate_id}', 'Home\IndexController@cate');
     Route::get('/art/{art_id}', 'Home\IndexController@article');
     Route::get('/aboutUs', 'Home\IndexController@aboutUs');
+    Route::get('/message', 'Home\IndexController@message');
+    Route::post('/submitMessage', 'Home\IndexController@submitMessage');
 
     Route::any('/admin/login', 'Admin\LoginController@login');
     Route::get('/admin/code', 'Admin\LoginController@code');

@@ -6,7 +6,9 @@ use App\Http\Model\Article;
 use App\Http\Model\Category;
 use App\Http\Model\Config;
 use App\Http\Model\Links;
+use App\Http\Model\Message;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class IndexController extends CommonController
 {
@@ -50,5 +52,27 @@ class IndexController extends CommonController
     }
     public function aboutUs(){
         return view('home.aboutUs');
+    }
+    public function message(){
+        //最新的6篇文章
+        $hot = Article::orderBy('art_view','desc')->take(6)->get();
+        //友情链接
+        $links = Links::orderBy('link_order','asc')->get();
+
+        return view('home.message',compact('hot','links'));
+    }
+    public function submitMessage(){
+        $input = Input::get();
+        $account = htmlentities($input['account'], ENT_QUOTES, 'UTF-8');
+        $contact = htmlentities($input['contact'], ENT_QUOTES, 'UTF-8');
+        $message = htmlentities($input['message'], ENT_QUOTES, 'UTF-8');
+        $data = array('account'=>$account,'contact'=>$contact,'message'=>$message);
+        $ret = Message::insert($data);
+        if($ret){
+            $status = 'ok';
+        }else{
+            $status = 'error';
+        }
+        return response()->json($status);
     }
 }
