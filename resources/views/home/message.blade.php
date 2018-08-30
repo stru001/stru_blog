@@ -90,13 +90,28 @@
                 $("#fault").show();
                 return false;
             }
+            if(account.trim().length > 30){
+                $("#fault_message").html("<strong>Warning! </strong>姓名不允许超过30个字符.");
+                $("#fault").show();
+                return false;
+            }
             if(contact.trim().length <= 0){
                 $("#fault_message").html("<strong>Warning! </strong>请输入您的联系方式.");
                 $("#fault").show();
                 return false;
             }
+            if(contact.trim().length > 30){
+                $("#fault_message").html("<strong>Warning! </strong>联系方式不允许超过30个字符.");
+                $("#fault").show();
+                return false;
+            }
             if(message.trim().length <= 0){
                 $("#fault_message").html("<strong>Warning! </strong>您不想对我说的什么吗？.");
+                $("#fault").show();
+                return false;
+            }
+            if(message.trim().length > 255){
+                $("#fault_message").html("<strong>Warning! </strong>留言不允许超过255个字符.");
                 $("#fault").show();
                 return false;
             }
